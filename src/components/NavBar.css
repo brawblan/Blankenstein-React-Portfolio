@@ -1,0 +1,17 @@
+.navbar-container {
+  display: flex;
+  padding: 1rem;
+  background-color: rgba(255, 72, 196, 1);
+  align-items: baseline;
+}
+
+.header {
+  flex: 2;
+  text-align: left;
+}
+
+.btn-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}

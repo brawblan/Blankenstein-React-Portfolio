@@ -1,0 +1,23 @@
+.main-hero {
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(43, 209, 252, 1);
+}
+
+h2,
+h3 {
+  margin: 0.5rem auto;
+  color: rgba(243, 234, 95, 1);
+  text-shadow: 0 0 1px black;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
