@@ -1,0 +1,26 @@
+.page-btn {
+  outline: none;
+  text-transform: lowercase;
+  border-style: groove;
+  text-decoration: none;
+  color: var(--pink-off);
+  border-bottom: 1px var(--pink);
+  border: 3px solid var(--pink-off);
+  margin: 1rem;
+  padding: 5px;
+  width: 6rem;
+  text-align: center;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.page-btn:hover {
+  box-shadow: 0 0 6px var(--purple), inset 0 0 4px var(--purple);
+  border: 3px solid var(--purple);
+  color: var(--purple);
+  text-shadow: 0 0 12px var(--purple);
+  transition: all 0.3s ease-in-out;
+  animation: blink 0.5s linear 3;
+}
+.page-btn:active {
+  box-shadow: 0 0 16px var(--purple), inset 0 0 12px var(--purple);
+}

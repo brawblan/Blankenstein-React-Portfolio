@@ -1,0 +1,32 @@
+.website-link-btn button {
+  outline: none;
+  background: transparent;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--red-off);
+  transition: all 0.3s ease-in-out;
+}
+.website-link-btn:hover button {
+  color: var(--red);
+  transition: all 0.3s ease-in-out;
+}
+
+.website-link-btn {
+  margin-top: 1rem;
+  border: 2px solid var(--red-off);
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.website-link-btn:hover {
+  box-shadow: 0 0 6px var(--red), inset 0 0 4px var(--red);
+  border: 2px solid var(--red);
+  color: var(--red);
+  text-shadow: 0 0 12px var(--red);
+  transition: all 0.3s ease-in-out;
+}
+.website-link-btn:active {
+  box-shadow: 0 0 16px var(--red), inset 0 0 12px var(--red);
+}
