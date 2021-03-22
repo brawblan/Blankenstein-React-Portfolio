@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 import './Footer.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
 
 library.add(fab)
 

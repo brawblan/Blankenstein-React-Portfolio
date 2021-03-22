@@ -1,5 +1,5 @@
 import React from 'react'
-import './BtnPrimary.css'
+import './LinkBtn.css'
 import { Link } from 'react-router-dom'
 
 const BtnPrimary = ({ content }) => {

@@ -1,15 +1,16 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
+import About from '../components/About'
 import Footer from '../components/Footer'
 
-function NotFoundPage() {
+const AboutPage = () => {
   return (
-    <div>
+    <>
       <NavBar />
-        404 Page Not Found
+      <About />
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default NotFoundPage;
+export default AboutPage;

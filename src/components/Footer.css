@@ -4,17 +4,34 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  border: 4px solid var(--purple);
+  margin: 1rem;
   padding: 1rem;
-  background-color: rgba(192, 77, 249, 1);
+  border-radius: 2rem;
+  box-shadow: 0 0 16px var(--purple), inset 0 0 12px var(--purple);
+  color: var(--purple);
+  background-color: var(--panel-bg);
 }
 
 .socials-container {
   display: flex;
   gap: 1rem;
 }
+.socials-container a {
+  color: var(--purple-off);
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in-out;
+}
+.socials-container a:hover {
+  border-radius: 50%;
+  color: var(--red);
+  filter: drop-shadow(0 0 8px var(--red));
+  transition: all 0.3s ease-in-out;
+}
 
 .faHeart {
-  color: red;
+  color: var(--red);
+  filter: drop-shadow(0 0 6px var(--red));
   margin: 0 2px;
 }
 

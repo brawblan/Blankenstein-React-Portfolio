@@ -1,0 +1,59 @@
+.project-page-container {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.project-header {
+  color: var(--yellow);
+  text-shadow: 0 0 3px var(--yellow);
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  border: 1px solid var(--red);
+  border-radius: 2rem;
+  box-shadow: 0 0 6px var(--red), inset 0 0 4px var(--red);
+  background-color: var(--panel-bg);
+}
+
+.project-wrapper {
+  border: 4px solid var(--purple);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 6px var(--purple), inset 0 0 4px var(--purple);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-wrapper:hover {
+  box-shadow: 0 0 16px var(--red), inset 0 0 12px var(--red);
+  border: 3px solid var(--red);
+  color: var(--red);
+  text-shadow: 0 0 12px var(--red);
+  transition: all 0.3s ease-in-out;
+  animation: blink 0.5s linear 1;
+}
+.project-wrapper:active {
+  box-shadow: 0 0 16px var(--red), inset 0 0 12px var(--red);
+}
+
+.project-wrapper h3 {
+  transition: all 0.3s ease-in-out;
+  color: var(--blue);
+  text-decoration: underline;
+}
+.project-wrapper:hover h3 {
+  color: var(--red);
+  transition: all 0.3s ease-in-out;
+} 

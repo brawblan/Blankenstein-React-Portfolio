@@ -1,23 +1,32 @@
 .main-hero {
   text-align: center;
-  height: 80vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(43, 209, 252, 1);
+  padding: 1rem;
 }
 
-h2,
-h3 {
+.intro-wrapper {
+  border: 4px solid var(--yellow);
+  margin: auto;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 16px var(--yellow), inset 0 0 12px var(--yellow);
+  background-color: var(--panel-bg);
+}
+
+.intro-wrapper h2,
+.intro-wrapper h3 {
   margin: 0.5rem auto;
-  color: rgba(243, 234, 95, 1);
-  text-shadow: 0 0 1px black;
+  color: var(--blue);
 }
 
-h2 {
+.intro-wrapper h2 {
   font-size: 3rem;
 }
 
-h3 {
+.intro-wrapper h3 {
   font-size: 1.2rem;
 }
