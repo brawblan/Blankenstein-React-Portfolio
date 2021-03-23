@@ -2,12 +2,12 @@ import React from 'react'
 import './LinkBtn.css'
 import { Link } from 'react-router-dom'
 
-const BtnPrimary = ({ content }) => {
+const LinkBtn = ({ content }) => {
   return (
     <>
-      <Link to={`/pages/${content}`} className="page-btn">{content}</Link>
+      <Link to={`/${content}`} className="page-btn">{content}</Link>
     </>
   )
 }
 
-export default BtnPrimary
+export default LinkBtn

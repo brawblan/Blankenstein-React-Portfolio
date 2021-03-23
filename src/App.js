@@ -1,6 +1,6 @@
 import './index.css'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import HomePage from './pages'
+import HomePage from './pages/index.jsx'
 import ProjectsPage from './pages/projects'
 import AboutPage from './pages/about'
 import ContactPage from './pages/contact'
@@ -14,14 +14,14 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path={['/', '/pages/home']} component={HomePage} />
-        <Route exact path="/pages/projects" component={ProjectsPage} />
-        <Route exact path="/pages/about" component={AboutPage} />
-        <Route exact path="/pages/contact" component={ContactPage} />
-        <Route exact path="/pages/projectPages/LandingPage" component={LandingPage} />
-        <Route exact path="/pages/projectPages/MovieAPI_Page" component={MovieAPI_Page} />
-        <Route exact path="/pages/projectPages/DrumMachine" component={DrumMachine} />
-        <Route exact path="/pages/projectPages/RandomQuote" component={RandomQuote} />
+        <Route exact path='/' component={HomePage} />
+        <Route exact path="/projects" component={ProjectsPage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/contact" component={ContactPage} />
+        <Route exact path="/landing_page" component={LandingPage} />
+        <Route exact path="/movie_api_page" component={MovieAPI_Page} />
+        <Route exact path="/drum_machine" component={DrumMachine} />
+        <Route exact path="/random_quote" component={RandomQuote} />
         <Route exact path="/404" component={NotFoundPage} />
         <Redirect to="/404" />
       </Switch>
