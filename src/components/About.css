@@ -1,0 +1,85 @@
+.about-me-page {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.4rem;
+  margin: 3rem;
+}
+
+.about-me-page .bio-wrapper {
+  display: flex;
+  border: 4px solid var(--yellow);
+  margin: auto;
+  width: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 16px var(--yellow), inset 0 0 12px var(--yellow);
+  background-color: var(--panel-bg);
+  color: var(--blue);
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--blue);
+  box-shadow: 0 0 16px var(--blue), inset 0 0 12px var(--blue);
+  border-radius: 50%;
+}
+
+.about-me {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: auto;
+  width: 60%;
+  flex-wrap: wrap;
+}
+
+.specialty-boxes {
+  display: flex;
+  gap: 1.8rem;
+  margin-top: 3rem;
+}
+
+.specialty-boxes .box {
+  border: 4px solid var(--red);
+  width: 50px;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 16px var(--red), inset 0 0 12px var(--red);
+  background-color: var(--panel-bg);
+  color: var(--blue);
+}
+
+.tech-skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.tech-skills-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+.tech-skill-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 25vw;
+}
+.tech-skill-wrapper h4 {
+  color: var(--red);
+  filter: drop-shadow(0 0 10px var(--red));
+}
+
+.nes-progress {
+  align-self: flex-end;
+  width: 70%;
+  height: 2rem;
+}

@@ -1,0 +1,20 @@
+h2.project-header {
+  align-self: center;
+  color: var(--yellow);
+  filter: drop-shadow(0 0 7px var(--yellow));
+  font-weight: 300;
+  font-size: 3rem;
+  margin: 0.5rem;
+  width: fit-content;
+  cursor: pointer;
+}
+h2.project-header:hover {
+  animation: blink 0.3s linear 2;
+}
+
+h2.project-header.turnOff {
+  color: var(--yellow-off);
+}
+h2.project-header.turnOff:hover {
+  animation: none;
+}

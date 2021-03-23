@@ -29,10 +29,10 @@
   transition: all 0.3s ease-in-out;
 }
 
-.faHeart {
-  color: var(--red);
+.nes-icon.is-small {
+  margin: 0 4px 3px;
   filter: drop-shadow(0 0 6px var(--red));
-  margin: 0 2px;
+  vertical-align: bottom;
 }
 
 .social-btn {

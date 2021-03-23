@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 import './Footer.css'
@@ -27,7 +26,7 @@ const Footer = () => {
       </div>
       <div className="footer-message">
         Made with
-        <FontAwesomeIcon icon={faHeart} className="faHeart" />
+        <i class="nes-icon is-small heart"></i>
         by Brandon Blankenstein
       </div>
     </div>  

@@ -30,16 +30,3 @@ function App() {
 }
 
 export default App;
-
-// import projectsArr from './assets/projectsArray'
-// {/* {projectsArr.map(({ title, src, route, repo }) => {
-// return (
-//   <Route
-//     exact path={`/pages/projectPages/${route}`} 
-//     component={route}
-//     // src={src}
-//     // repo={repo}
-//     // key={title}
-//   />
-// )})
-// } */}

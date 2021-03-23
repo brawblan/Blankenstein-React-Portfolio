@@ -1,9 +1,9 @@
 import React from 'react'
-import './Hero.css'
+import './HomeIntro.css'
 
-const Hero = () => {
+const HomeIntro = () => {
   return (
-    <div className="main-hero">
+    <div className="main-intro">
       <div className="intro-wrapper">
         <h3>Howdy, my name is</h3>
         <h2>Brandon Blankenstein</h2>
@@ -13,4 +13,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default HomeIntro
