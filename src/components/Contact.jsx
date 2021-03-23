@@ -8,7 +8,7 @@ function Contact() {
     <TitleFlipSwitch title='Contact Me' />
     <div className="contact-intro-wrapper">
 
-      <form name="contact" method="post" action="/contact">
+      <form name="contact" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <div class="nes-field is-inline">
           <label>Name</label>
