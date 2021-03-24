@@ -10,18 +10,20 @@ import { Link } from 'react-router-dom'
 
 const query = `
 {
-  projectContent(id: "3KL2sn9IQHRNlcb7VnRW1o") {
-    title
-    route
-    repo
-    siteLink
-    projectImage
-    description
+  projectContentCollection {
+    items {
+      title
+      route
+      repo
+      siteLink
+      projectImage
+      description
+    }
   }
 }
 `
 
-const LandingPage = () => {
+const TemplateTest = () => {
   const [isHover, setIsHover] = useState(false)
   const addHoverClass = () => {
     setIsHover(true)
@@ -49,12 +51,14 @@ const LandingPage = () => {
         if (errors) {
           console.error(errors);
         }
-
+        
         // rerender the entire component with new data
         setPage(data.projectContent);
       });
   }, [])
 
+  console.log(page);
+  
   // show a loading screen case the data hasn't arrived yet
   if (!page) {
     return "Loading...";
@@ -110,4 +114,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default TemplateTest

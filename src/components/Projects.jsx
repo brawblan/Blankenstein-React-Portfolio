@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React } from 'react'
 import './Projects.css'
 import TitleFlipSwitch from '../components/TitleFlipSwitch'
 import { Link } from 'react-router-dom'
@@ -11,7 +11,7 @@ const Projects = () => {
       <TitleFlipSwitch title='Portfolio Projects' />
       <div className="project-container">
         {projectsArr.map(({ title, src, route }) => (
-          <Link to={`/pages/projectPages/${route}`} className="project-page-btn">
+          <Link to={`/${route}`} className="project-page-btn">
             <div className="project-wrapper">
               <h3>{title}</h3>
               <img src={src} alt={title} width="300" height="150" />

@@ -7,30 +7,37 @@ const projectsArr = [
   { 
     title: 'Landing Page', 
     src: landingPageImage, 
-    route: 'LandingPage', 
+    route: 'landing_page', 
     repo: 'book-landing',
     siteLink: 'https://book-landing.vercel.app',
   },
   { 
     title: 'Movie Poster API', 
     src: apiImage, 
-    route: 'MovieAPI_Page', 
+    route: 'movie_api_page', 
     repo: 'W8_API-Project' ,
     siteLink: '',
   },
   { 
     title: 'Drum Machine', 
     src: drumMachineImage, 
-    route: 'DrumMachine', 
+    route: 'drum_machine', 
     repo: 'drum-machine' ,
     siteLink: '',
   },
   { 
     title: 'Random Quote Generator', 
     src: quoteGenImage, 
-    route: 'RandomQuote', 
+    route: 'random_quote', 
     repo: 'random-quote-generator' ,
     siteLink: '',
+  },
+  { 
+    title: 'Template Test', 
+    src: landingPageImage, 
+    route: 'template_test', 
+    repo: 'book-landing',
+    siteLink: 'https://book-landing.vercel.app',
   },
 ]
 

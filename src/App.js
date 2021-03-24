@@ -8,6 +8,7 @@ import LandingPage from './pages/projectPages/LandingPage'
 import MovieAPI_Page from './pages/projectPages/MovieAPI_Page'
 import DrumMachine from './pages/projectPages/DrumMachine'
 import RandomQuote from './pages/projectPages/RandomQuote'
+import TemplateTest from './pages/projectPages/TemplateTest'
 import NotFoundPage from './pages/404'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/movie_api_page" component={MovieAPI_Page} />
         <Route exact path="/drum_machine" component={DrumMachine} />
         <Route exact path="/random_quote" component={RandomQuote} />
+        <Route exact path="/template_test" component={TemplateTest} />
         <Route exact path="/404" component={NotFoundPage} />
         <Redirect to="/404" />
       </Switch>

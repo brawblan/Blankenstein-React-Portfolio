@@ -18,15 +18,15 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="socials-container">
-        {socials.map(({ site, url }) => (
-          <a href={url} className="social-btn" target="_blank" rel='noreferrer'>
+        {socials.map(({ site, url }, index) => (
+          <a href={url} className="social-btn" target="_blank" rel='noreferrer' key={index}>
             <FontAwesomeIcon icon={['fab', `${site}`]} />
           </a>
         ))}
       </div>
       <div className="footer-message">
         Made with
-        <i class="nes-icon is-small heart"></i>
+        <i className="nes-icon is-small heart"></i>
         by Brandon Blankenstein
       </div>
     </div>  

@@ -5,7 +5,16 @@ import { Link } from 'react-router-dom'
 const LinkBtn = ({ content }) => {
   return (
     <>
-      <Link to={`/${content}`} className="page-btn">{content}</Link>
+      <Link 
+        to={
+          content === 'Home' ?
+          '/' :
+          `/${content}`
+        } 
+        className="page-btn"
+      >
+        {content}
+      </Link>
     </>
   )
 }

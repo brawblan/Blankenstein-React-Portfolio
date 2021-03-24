@@ -25,7 +25,7 @@ const DrumMachine = () => {
 
         <div className="project-picture-and-description">
           <Link
-            to={'/pages/projects'}
+            to={'/projects'}
             className="go-back-btn"
             onMouseOver={() => addHoverClass()}
             onMouseLeave={() => removeHoverClass()}

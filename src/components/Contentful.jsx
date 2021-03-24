@@ -1,45 +1,30 @@
-import { React, useState, useEffect } from 'react'
-import NavBar from '../../components/NavBar'
-import Footer from '../../components/Footer'
-import GitHubBtn from '../../components/GitHubBtn'
-import WebsiteLinkBtn from '../../components/WebsiteLinkBtn'
-import './ProjectPages.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+import { React, useState, useEffect } from "react"
 
 const query = `
 {
-  projectContent(id: "3KL2sn9IQHRNlcb7VnRW1o") {
-    title
-    route
-    repo
-    siteLink
-    projectImage
-    description
+  nameCollection {
+    items {
+      title
+      logo {
+        url
+      }
+    }
   }
 }
 `
 
-const LandingPage = () => {
-  const [isHover, setIsHover] = useState(false)
-  const addHoverClass = () => {
-    setIsHover(true)
-  }
-  const removeHoverClass = () => {
-    setIsHover(false)
-  }
+function Contentful() {
 
   const [page, setPage] = useState(null);
 
   useEffect(() => {
     window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/noefj5y57vr9/`, {
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           // Authenticate the request
-          Authorization: `Bearer MTmSGOTdxvfPA7rRthSdqkZRyhmees_WMpcl_BBe9g4`,
+          Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
         },
         // send the GraphQL query
         body: JSON.stringify({ query }),
@@ -51,18 +36,18 @@ const LandingPage = () => {
         }
 
         // rerender the entire component with new data
-        setPage(data.projectContent);
+        setPage(data.nameCollection.items[0]);
       });
   }, [])
 
-  // show a loading screen case the data hasn't arrived yet
+// show a loading screen case the data hasn't arrived yet
   if (!page) {
     return "Loading...";
   }
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar />
       <div className="project-page">
 
         <div className="project-picture-and-description">
@@ -79,12 +64,18 @@ const LandingPage = () => {
             />
             Go Back to Projects
           </Link>
-          <img src="../../assets/landingPage.png" alt="" width="600" height="300" />
-          <GitHubBtn repo={page.repo} />
+          <img src={landingPageImage} alt="" width="600" height="300" />
+          <GitHubBtn repo='book-landing' />
           <div className="project-description">
             <h3>Project Brief</h3>
             <p>
-            {page.description}
+              This website was built using the NextJS framework as a landing page for a very successful book launch.
+            </p>
+            <p>
+              This was my first freelance project so there were new challenges to face. Some those included working with a team, having a strict deadline, and working with an email capture API.
+            </p>
+            <p>
+              I really enjoyed working with a designer who provided all assets and mockups. It gave me a chance to focuse solely on building the website and implementing the requirements.
             </p>
           </div>
         </div>
@@ -92,7 +83,7 @@ const LandingPage = () => {
         <div className="project-link-and-tech">
           <div className="project-link">
             <h4>Visit Website</h4>
-            <WebsiteLinkBtn title={page.title} />
+            <WebsiteLinkBtn title='Landing Page' />
           </div>
           <div className="project-tech">
             <h4>Tech Used</h4>
@@ -105,9 +96,9 @@ const LandingPage = () => {
         </div>
 
       </div>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }
 
-export default LandingPage
+export default Contentful
