@@ -17,7 +17,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      
+
       <div className="specialty-boxes">
         <div className="box">
           <i class="nes-logo"></i> 
@@ -41,19 +41,19 @@ const About = () => {
         <TitleFlipSwitch title='Tech Skills' />
         <div className="tech-skill-wrapper">
           <h4>HTML</h4>
-          <progress class="nes-progress is-primary" value="60" max="100" width="100"></progress>
+          <progress className="nes-progress is-primary" value="60" max="100" width="100"></progress>
         </div>
         <div className="tech-skill-wrapper">
           <h4>CSS</h4>
-          <progress class="nes-progress is-primary" value="90" max="100"></progress>
+          <progress className="nes-progress is-primary" value="90" max="100"></progress>
         </div>
         <div className="tech-skill-wrapper">
           <h4>JAVASCRIPT</h4>
-          <progress class="nes-progress is-primary" value="90" max="100"></progress>
+          <progress className="nes-progress is-primary" value="90" max="100"></progress>
         </div>
         <div className="tech-skill-wrapper">
           <h4>REACTJS</h4>
-          <progress class="nes-progress is-primary" value="90" max="100"></progress>
+          <progress className="nes-progress is-primary" value="90" max="100"></progress>
         </div>
       </div>
     </div>
