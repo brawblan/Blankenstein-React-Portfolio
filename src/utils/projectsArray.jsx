@@ -32,13 +32,6 @@ const projectsArr = [
     repo: 'random-quote-generator' ,
     siteLink: '',
   },
-  { 
-    title: 'Template Test', 
-    src: landingPageImage, 
-    route: 'template_test', 
-    repo: 'book-landing',
-    siteLink: 'https://book-landing.vercel.app',
-  },
 ]
 
 export default projectsArr

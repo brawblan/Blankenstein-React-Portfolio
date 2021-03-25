@@ -46,18 +46,14 @@ const Projects = () => {
     <div className="project-page-container">
       <TitleFlipSwitch title='Portfolio Projects' />
       <div className="project-container">
-        {page.map((item, index ) => {
-          if (index === 0) {
-            return (
-            <Link to={`/${item.route}`} className="project-page-btn">
-              <div className="project-wrapper">
-                <h3>{item.title}</h3>
-                <img src={item.src} alt={item.title} width="300" height="150" />
-              </div>
-            </Link>
-            )
-          }
-        })}
+        {projectsArr.map(({ title, src, route }) => (
+          <Link to={`/${route}`} className="project-page-btn">
+            <div className="project-wrapper">
+              <h3>{title}</h3>
+              <img src={src} alt={title} width="300" height="150" />
+            </div>
+          </Link> 
+        ))}
       </div>
     </div>
   )
