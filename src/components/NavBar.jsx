@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="navbar-container">
       <div className="header">
-        Portfolio: Built in React
+        Portfolio: Built in React, SITE UNDER CONSTRUCTION
       </div>
       <div className="btn-container">
         <LinkBtn content={'Home'} />
