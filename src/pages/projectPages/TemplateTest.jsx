@@ -8,23 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-const TemplateTest = ({ id }) => {
-  const query = `
-  {
-    projectContentCollection {
-      items {
-        id
-        title
-        route
-        repo
-        siteLink
-        projectImage
-        description
-      }
-    }
-  }
-  `
-  const [page, setPage] = useState(null);
+const TemplateTest = ({ page }) => {
   const [isHover, setIsHover] = useState(false)
   const addHoverClass = () => {
     setIsHover(true)
@@ -32,24 +16,6 @@ const TemplateTest = ({ id }) => {
   const removeHoverClass = () => {
     setIsHover(false)
   }
-
-  useEffect(() => {
-    fetch(`https://graphql.contentful.com/content/v1/spaces/noefj5y57vr9/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer MTmSGOTdxvfPA7rRthSdqkZRyhmees_WMpcl_BBe9g4`,
-      },
-      body: JSON.stringify({ query }),
-    })
-      .then((response) => response.json())
-      .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        }
-        setPage(data.projectContentCollection.items);
-      });
-  }, [])
 
   if (!page) {
     return "Loading...";

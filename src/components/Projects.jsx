@@ -1,63 +1,33 @@
-import { React, useState, useEffect } from 'react'
+import React from 'react'
 import './Projects.css'
 import TitleFlipSwitch from '../components/TitleFlipSwitch'
 import { Link } from 'react-router-dom'
-import projectsArr from '../utils/projectsArray'
+import query from '../pages/api/query'
 
 const Projects = () => {
-  const [page, setPage] = useState(null)
 
-  const query = `
-  {
-    projectContentCollection {
-      items {
-        id
-        title
-        route
-        repo
-        siteLink
-        projectImage
-        description
-      }
-    }
-  }
-  `
+  var page 
 
-  useEffect(() => {
-    window
-    .fetch(`https://graphql.contentful.com/content/v1/spaces/noefj5y57vr9/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer MTmSGOTdxvfPA7rRthSdqkZRyhmees_WMpcl_BBe9g4`,
-      },
-      body: JSON.stringify({ query }),
-    })
-      .then((response) => response.json())
-      .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        }
-        setPage(data.projectContentCollection.items);
-      });
-  }, [])
+  query(page)
+
+  console.log(page)
 
   return (
     <div className="project-page-container">
       <TitleFlipSwitch title='Portfolio Projects' />
       <div className="project-container">
-        {page.map((item, index ) => {
+        {/* {page.map((item, index ) => {
           if (index === 0) {
-            return (
-            <Link to={`/${item.route}`} className="project-page-btn">
+            return ( */}
+            <Link to={`/${page.route}`} className="project-page-btn">
               <div className="project-wrapper">
-                <h3>{item.title}</h3>
-                <img src={item.src} alt={item.title} width="300" height="150" />
+                <h3>{page.title}</h3>
+                <img src={page.src} alt={page.title} width="300" height="150" />
               </div>
             </Link>
             )
-          }
-        })}
+          {/* }
+        })} */}
       </div>
     </div>
   )
